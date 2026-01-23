@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #212121;
+  --secondary-color: #6c778e;
+  --accent-color: #2a84ee;
+  --background-color: #e8f2fc;
+  --button-bg: linear-gradient(91deg, #11ae88 5.69%, #2a84ee 169.72%);
+  --button-text: #fff;
+  --font-size-base: 2.2rem;
+  --line-height-base: 2.75rem;
+  --border-radius: 10px;
+}
+
+html { 
+  font-size: 62.5%; 
+}
+
+@font-face {
+  font-family: "NT Somic";
+  src: url(../fonts/nt-somic-regular.woff2) format("woff2");
+  font-weight: 400; font-display: swap;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url(../fonts/nt-somic-medium.woff2) format("woff2");
+  font-weight: 500; font-display: swap;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url(../fonts/nt-somic-bold.woff2) format("woff2");
+  font-weight: 700; font-display: swap;
+}
+
+*, ::after, ::before { 
+  box-sizing: border-box; 
+}
+
+.page__body {
+  font-family: "NT Somic", "Arial", sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  font-weight: 400; /* ✓ Добавлено */
+}
+
+a { 
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.text-center { 
+  text-align: center; 
+}
+.text-left { 
+  text-align: left; 
+}
+.text-right { 
+  text-align: right; 
+}
+
+.bg-primary { 
+  background-color: var(--primary-color); 
+}
+.bg-secondary { 
+  background-color: var(--secondary-color); 
+}
+.bg-accent { 
+  background-color: var(--accent-color); 
+}
+
+.border { 
+  border: 1px solid var(--secondary-color); 
+}
+.border-radius { 
+  border-radius: var(--border-radius); 
+}
+
+.button {
+  padding: 13px 35px;
+  background-color: var(--button-bg);
+  border-radius: var(--border-radius);
+  border: 0;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
