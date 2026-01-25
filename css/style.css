@@ -26,33 +26,52 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%; /* 1rem = 10px */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border-width: 0
 }
 
-body {
+
+.page {
+  height: 100%;
   margin: 0;
-  font-family: "NT Somic", "Arial", sans-serif;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  color: var(--primary-color);
-  background-color: var(--background-color);
+  padding: 0;
+  font-size: 62.5%
+}
+
+.button,
+.page__body {
+  font-family: "NT Somic", "Arial", sans-serif
+}
+
+.page__body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2rem;
+  line-height: 2.75rem;
+  letter-spacing: .032rem;
   font-weight: 400;
+  color: #212121
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  line-height: 1.2;
+.page__body::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%
 }
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-
 
 .button {
   padding: 13px 35px;
