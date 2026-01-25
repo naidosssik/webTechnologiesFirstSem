@@ -5,6 +5,7 @@
   --background-color: #ffffff;
   --button-bg: linear-gradient(91deg, #11ae88 5.69%, #2a84ee 169.72%);
   --button-text: #fff;
+  --font_size_h1: 4.0rem;
   --font-size-base: 2.2rem;
   --line-height-base: 2.75rem;
   --border-radius: 30px;
@@ -47,7 +48,7 @@ h3 {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: 4.0rem;
   margin-bottom: 2rem;
 }
 
@@ -467,97 +468,185 @@ footer {
 }
 
 .footer__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  padding: 50px 0
 }
 
 .footer__contacts {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  row-gap: 30px;
+  margin-bottom: 32px;
+  grid-area: contacts
 }
 
-.footer__contacts ul {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer__logo {
+  flex-direction: column;
+  align-items: start;
+  row-gap: 14px
 }
+
 
 .footer__block-group {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 20px;
+  margin-bottom: 30px;
+  grid-area: block-group
 }
 
-.footer__item ul {
-  list-style: none;
-  padding: 0;
+.footer__item,
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px
+}
+
+.footer__list a,
+.footer__title {
+  font-size: 1.8rem;
+  line-height: 2.25rem
+}
+
+.footer__title {
+  margin: 0
+}
+
+.footer__list {
   margin: 0;
-}
-
-.footer__item li {
-  margin-bottom: 10px;
-}
-
-.footer__container > ul {
-  display: flex;
-  gap: 10px;
-  list-style: none;
   padding: 0;
-  margin-top: 20px;
+  list-style-type: none
 }
 
-.footer__container > p {
-  margin-top: 30px;
-  color: var(--secondary-color);
-  font-size: 1.4rem;
+.footer__list a {
+  display: block;
+  text-decoration: none;
+  color: #6c778e
+}
+
+.footer__payment {
+  grid-area: payment
+}
+
+.footer__copyright,
+.footer__design,
+.footer__disclaimer {
+  color: #6c778e;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin: 0 0 27px
+}
+
+.footer__copyright {
+  grid-area: copyright
+}
+
+.footer__disclaimer {
+  grid-area: disclaimer
+}
+
+.footer__design {
+  grid-area: design
+}
+
+.footer__design span {
+  color: #2eb897
 }
 
 
-@media (max-width: 1024px) {
-  .tabs__content,
-  .reports__inner,
-  .test,
-  .footer__container {
-    grid-template-columns: 1fr;
-  }
-
-  .rate-card__wrapper {
-    min-height: auto;
-  }
-
-  main > .main__container > section:nth-of-type(6) ul {
-    grid-template-columns: 1fr;
-  }
+.indicators__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px
 }
 
-@media (max-width: 768px) {
-  .header__container {
-    flex-direction: column;
-    gap: 20px;
-  }
+.indicators__value {
+  margin: 0;
+  color: #2a84ee;
+  font-size: 5.6rem;
+  line-height: 3rem;
+  letter-spacing: .112rem;
+  font-weight: 500
+}
 
-  h1 {
-    font-size: 3.6rem;
-  }
+.indicators__description {
+  margin: 0;
+  color: #6c778e;
+  font-size: 1.6rem;
+  line-height: 2rem
+}
 
-  h2 {
-    font-size: 2.8rem;
-  }
+.tabs__link {
+  border: 0;
+  background-color: #e8f2fc;
+  text-align: center;
+  padding: 30px 40px 27px;
+  cursor: pointer;
+  color: #2eb897;
+  font-size: 2.6rem;
+  line-height: 2.99rem
+}
 
-  main > .main__container > section > ul {
-    flex-direction: column;
-  }
+.tabs__link--active {
+  background-color: #f6faff;
+  color: #212121
+}
 
-  .test {
-    padding: 30px 20px;
-  }
+.tabs__item {
+  border-radius: 10px;
+  overflow: hidden
+}
 
-  .footer__block-group {
-    flex-direction: column;
-    gap: 30px;
-  }
+.tabs details[open] summary {
+  color: #212121
+}
+
+.tabs__title {
+  padding: 16px 20px 18px;
+  color: #2eb897;
+  font-size: 1.8rem;
+  line-height: 2.07rem;
+  font-weight: 500;
+  background-color: #e8f2fc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.tabs__title::marker {
+  display: none
+}
+
+.tabs__title::after {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: url(../img/arrow-down.svg) no-repeat center;
+  flex-shrink: 0
+}
+
+.tabs__content {
+  padding: 21px 20px 40px;
+  background-color: #f6faff
+}
+
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 11px
+}
+
+.socials__link {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px
 }
 

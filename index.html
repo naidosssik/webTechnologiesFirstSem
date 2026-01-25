@@ -66,61 +66,84 @@
           </div>
         </div>
         <img src="#" alt="Изображение hero">
-        <ul>
-          <li>
-            <p>777</p>
-            <p>Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
+        <ul class="hero__indicators indicators">
+          <li class="indicators__item">
+            <p class="indicators__value">777</p>
+            <p class="indicators__description">Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
           </li>
-          <li>
-            <p>5</p>
-            <p>Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
+          <li class="indicators__item">
+            <p class="indicators__value">5</p>
+            <p class="indicators__description">Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
           </li>
-          <li>
-            <p>100 000</p>
-            <p>Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
+          <li class="indicators__item">
+            <p class="indicators__value">100 000</p>
+            <p class="indicators__description">Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Возможности сервиса</h2>
+       <section class="possibilities">
+        <h2 class="possibilities__title title">Возможности сервиса</h2>
         <div class="possibilities__tabs tabs">
           <div class="tabs__navigation">
-            <button type="button">Финансовая аналитика</button>
-            <button type="button">Товарная аналитика</button>
-            <button type="button">Аналитика внутренней рекламы</button>
-            <button type="button">Статистика</button>
-            <button type="button">Инструменты</button>
+            <button class="tabs__link tabs__link--active" type="button">Финансовая аналитика</button>
+            <button class="tabs__link" type="button">Товарная аналитика</button>
+            <button class="tabs__link" type="button">Аналитика внутренней рекламы</button>
+            <button class="tabs__link" type="button">Статистика</button>
+            <button class="tabs__link" type="button">Инструменты</button>
           </div>
-          <details open>
-            <summary>Финансовая аналитика</summary>
+          <details class="tabs__item" open>
+            <summary class="tabs__title">Финансовая аналитика</summary>
             <div class="tabs__content">
-              <h3>Инструменты для финансовой <br>аналитики</h3>
+              <h3>Инструменты для финансовой <br>аналитики</h3>
               <ul>
-                <li>Отчёт о прибылях и убытках (P&L)</li>
-                <li>Отчёт о движении денежных средств (ДДС)</li>
+                <li>Отчёт о прибылях и убытках (P&L)</li>
+                <li>Отчёт о движении денежных средств (ДДС)</li>
                 <li>Журнал операций</li>
                 <li>Сводка продаж</li>
                 <li>Учёт самовыкупов</li>
               </ul>
               <div>
-                <img src="#" alt="График финансовой аналитики">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/jpg"
+                    srcset="img/sheets-desktop@1x.jpg 1x, img/sheets-desktop@2x.jpg 2x">
+                  <img src="img/sheets-mobile@1x.jpg" srcset="img/sheets-mobile@2x.jpg 2x" width="280" height="173"
+                    alt="Таблица с показателями.">
+                </picture>
               </div>
-              <a href="#">Попробовать бесплатно</a>
+              <a class="button" href="#">Попробовать бесплатно</a>
             </div>
           </details>
-          <details>
-            <summary>Товарная аналитика</summary>
+          <details class="tabs__item">
+            <summary class="tabs__title">Товарная аналитика</summary>
           </details>
-          <details>
-            <summary>Аналитика внутренней рекламы</summary>
+          <details class="tabs__item">
+            <summary class="tabs__title">Аналитика внутренней рекламы</summary>
           </details>
-          <details>
-            <summary>Статистика</summary>
+          <details class="tabs__item">
+            <summary class="tabs__title">Статистика</summary>
           </details>
-          <details>
-            <summary>Инструменты</summary>
+          <details class="tabs__item">
+            <summary class="tabs__title">Инструменты</summary>
           </details>
         </div>
+        <div class="possibilities__test test">
+          <div class="test__wrapper">
+            <p class="test__heading">Начните экономить своё время</p>
+            <p class="test__appeal">3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
+            <form class="test__form" action="#" method="post" autocomplete="off">
+              <label class="test__label">
+                <input class="test__input" type="email" name="email" placeholder="Введите ваш email" required>
+              </label>
+              <button class="test__button button button--gradient-reverse" type="submit">Попробовать</button>
+            </form>
+          </div>
+          <div class="test__image-wrapper">
+            <img class="test__image" src="img/women-1-mobile@1x.png" srcset="img/women-1-mobile@2x.png 2x" width="320"
+              height="220" alt="Девушка с ноутбуком на фоне часов.">
+          </div>
+        </div>
+      </section>
+      <section>
         <div class="possibilities__test test">
           <div class="test__wrapper">
             <p>Начните экономить своё время</p>
@@ -304,26 +327,28 @@
     <div class="footer__container">
       <div class="footer__contacts">
         <div class="footer__logo logo">
-          <a href="#">
+          <a class="logo__link" href="./index.html">
             <img src="#" alt="Логотип в футере">
           </a>
-          <p>
-            Аналитика и оцифровка продаж<br>Wildberries и Ozon
+          <p class="logo__text">
+            Аналитика и оцифровка продаж<br>
+            <span class="logo__market logo__market--wb">Wildberries</span> и 
+            <span class="logo__market logo__market--ozon">Ozon</span>
           </p>
         </div>
-        <ul>
-          <li>
-            <a href="#">
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="#">
               <img src="#" alt="Соцсеть 1">
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="socials__item">
+            <a class="socials__link socials__link--telegram" href="#">
               <img src="#" alt="Соцсеть 2">
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="#">
               <img src="#" alt="Соцсеть 3">
             </a>
           </li>
@@ -331,8 +356,8 @@
       </div>
       <div class="footer__block-group">
         <div class="footer__item">
-          <h3>Сервис</h3>
-          <ul>
+          <h3 class="footer__title">Сервис</h3>
+          <ul class="footer__list">
             <li><a href="#">Для кого</a></li>
             <li><a href="#">Возможности</a></li>
             <li><a href="#">Тарифы</a></li>
@@ -342,16 +367,16 @@
           </ul>
         </div>
         <div class="footer__item">
-          <h3>Клиентам</h3>
-          <ul>
+          <h3 class="footer__title">Клиентам</h3>
+          <ul class="footer__list">
             <li><a href="#">Вход</a></li>
             <li><a href="#">Регистрация</a></li>
             <li><a href="#">Восстановления пароля</a></li>
           </ul>
         </div>
         <div class="footer__item">
-          <h3>Документы</h3>
-          <ul>
+          <h3 class="footer__title">Документы</h3>
+          <ul class="footer__list">
             <li><a href="#">Пользовательское соглашение</a></li>
             <li><a href="#">Политика конфиденциальности</a></li>
             <li><a href="#">Публичная оферта</a></li>
@@ -360,26 +385,26 @@
           </ul>
         </div>
       </div>
-      <ul>
-        <li>
+      <ul class="footer__payment payment">
+        <li class="payment__item">
           <img src="#" alt="Платёжная система 1">
         </li>
-        <li>
+        <li class="payment__item">
           <img src="#" alt="Платёжная система 2">
         </li>
-        <li>
+        <li class="payment__item">
           <img src="#" alt="Платёжная система 3">
         </li>
-        <li>
+        <li class="payment__item">
           <img src="#" alt="Платёжная система 4">
         </li>
-        <li>
+        <li class="payment__item">
           <img src="#" alt="Платёжная система 5">
         </li>
       </ul>
-      <p>2022–2023 Mpassistant</p>
-      <p>Информация, размещённая на сайте, не является публичной офертой</p>
-      <p>Редизайн сайта Turkuletsdesign</p>
+      <p class="footer__copyright">&copy; 2022–2023 Mpassistant</p>
+      <p class="footer__disclaimer">Информация, размещённая на сайте, не является публичной офертой</p>
+      <p class="footer__design">Редизайн сайта <span>Turkuletsdesign</span></p>
     </div>
   </footer>
 </body>
