@@ -47,71 +47,37 @@ h3 {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 4.0rem;
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-h3 {
-  font-size: 2.4rem;
-  margin-bottom: 1.2rem;
-}
-
-p {
-  margin: 0 0 1.5rem;
-}
-
 a {
   color: var(--accent-color);
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-
-.bg-primary { background-color: var(--primary-color); }
-.bg-secondary { background-color: var(--secondary-color); }
-.bg-accent { background-color: var(--accent-color); }
-
-.border { border: 1px solid var(--secondary-color); }
-.border-radius { border-radius: var(--border-radius); }
 
 
-.button,
-button,
-[type="submit"],
-[type="button"] {
+.button {
   padding: 13px 35px;
-  background: var(--button-bg);
-  border: 0;
   border-radius: var(--border-radius);
-  color: var(--button-text);
+  border: 0;
+  background: linear-gradient(91deg, #11ae88 5.69%, #2a84ee 169.72%);
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
   font-size: 1.6rem;
   line-height: 2rem;
-  cursor: pointer;
-  font-weight: 500;
-  transition: opacity 0.2s;
+  cursor: pointer
 }
 
-.button:hover,
-button:hover,
-[type="submit"]:hover,
-[type="button"]:hover {
-  opacity: 0.9;
+.button:focus,
+.button:hover {
+  box-shadow: 0 0 30px 0 #50abdc;
+  transition: all .3s
 }
+
+.button:active {
+  background: linear-gradient(91deg, #2a84ee 5.69%, #11ae88 169.72%), #11ae88
+}
+
 
 
 .header__container,
@@ -1097,4 +1063,31 @@ footer {
   background-position: center;
   width: 60px;
   height: 60px
+}
+
+
+.payment {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 17px;
+  margin: 0 0 30px
+}
+
+.payment li:nth-child(1) {
+  margin-right: 8px
+}
+
+.payment li:nth-child(2) {
+  margin-right: 16px
+}
+
+.payment li:nth-child(4) {
+  margin-right: 17px
+}
+
+.payment__image {
+  display: block
 }
