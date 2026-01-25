@@ -11,37 +11,41 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="header__container">
       <div class="header__logo logo">
-        <a href="#">
-          <img src="#" alt="Логотип">
+        <a class="logo__link" href="#">
+          <img class="logo__image" src="#" alt="Логотип">
+          <span class="sr-only">На главную</span>
         </a>
-        <p>
+        <p class="logo__text">
           Аналитика и оцифровка продаж<br>
-          Wildberries и Ozon
+          <span class="logo__market logo__market--wb">Wildberries</span> и
+          <span class="logo__market logo__market--ozon">Ozon</span>
         </p>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">О нас</a>
+      <nav class="header__site-navigation site-navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">О нас</a>
           </li>
-          <li>
-            <a href="#">Возможности</a>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">Возможности</a>
           </li>
-          <li>
-            <a href="#">Тарифы</a>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">Тарифы</a>
           </li>
         </ul>
       </nav>
-      <nav>
-        <ul>
-          <li>
-            <button>Вход</button>
+      <nav class="header__user-navigation user-navigation">
+        <ul class="user-navigation__list">
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--sign-in" href="#">
+              <span>Вход</span>
+            </a>
           </li>
-          <li>
-            <button>Зарегистрироваться</button>
+          <li class="user-navigation__item">
+            <button class="user-navigation__link user-navigation__link--sign-up button">Зарегистрироваться</button>
           </li>
         </ul>
       </nav>
@@ -50,22 +54,23 @@
 
   <main id="main">
     <div class="main__container">
-      <section>
-        <h1>
-          Внутренняя аналитика и финансовый учёт для бизнеса на маркетплейсах
+      <section class="hero">
+        <h1 class="hero__title title">
+          <span>Внутренняя аналитика</span>
+          и <span>финансовый учёт</span>
           <img src="#" alt="Иконка">
         </h1>
-        <p>Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
+        <p class="hero__appeal">Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
         <div class="hero__test test test--half">
           <div class="test__wrapper">
-            <p>Начните свой 3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
-            <form action="#" method="POST" autocomplete="off">
-              <input id="email" type="email" name="email" placeholder="Введите ваш email" required>
-              <button type="submit">Попробовать</button>
+            <p class="test__appeal">Начните свой 3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
+            <form class="test__form" action="#" method="POST" autocomplete="off">
+              <input class="test__input" id="email" type="email" name="email" placeholder="Введите ваш email" required>
+              <button class="test__button button button--gradient-reverse" type="submit">Попробовать</button>
             </form>
           </div>
         </div>
-        <img src="#" alt="Изображение hero">
+        <img class="hero__image" src="#" alt="Изображение hero">
         <ul class="hero__indicators indicators">
           <li class="indicators__item">
             <p class="indicators__value">777</p>
@@ -81,7 +86,7 @@
           </li>
         </ul>
       </section>
-       <section class="possibilities">
+      <section class="possibilities">
         <h2 class="possibilities__title title">Возможности сервиса</h2>
         <div class="possibilities__tabs tabs">
           <div class="tabs__navigation">
@@ -143,78 +148,73 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="possibilities__test test">
-          <div class="test__wrapper">
-            <p>Начните экономить своё время</p>
-            <p>3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
-            <form action="#" method="post" autocomplete="off">
-              <label>
-                <input type="email" name="email" placeholder="Введите ваш email" required>
-              </label>
-              <button type="submit">Попробовать</button>
-            </form>
-          </div>
-          <div class="test__image-wrapper">
-            <img src="#" alt="Изображение теста">
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Собираем единые отчёты по всем вашим магазинам</h2>
-        <p>C Mpassistant вы сможете:</p>
+      <section class="reports">
+        <h2 class="reports__title title">Собираем единые отчёты по всем вашим магазинам</h2>
+        <p class="reports__subtitle">C Mpassistant вы сможете:</p>
         <div class="reports__inner">
-          <ul>
-            <li>
-              <p>Сможете видеть прибыль по всем магазинам и маркетплейсам в одном месте</p>
+          <ul class="reports__list">
+            <li class="reports__item">
+              <p class="reports__text">Сможете видеть прибыль по всем магазинам и маркетплейсам в одном месте</p>
             </li>
-            <li>
-              <p>Не потратите время на сбор данных из нескольких кабинетов или маркетплейсов</p>
+            <li class="reports__item">
+              <p class="reports__text">Не потратите время на сбор данных из нескольких кабинетов или маркетплейсов</p>
             </li>
-            <li>
-              <p>Добавите любое количество магазинов</p>
+            <li class="reports__item">
+              <p class="reports__text">Добавите любое количество магазинов</p>
             </li>
           </ul>
-          <img src="#" alt="Отчёты">
+          <img class="reports__image" src="#" alt="Отчёты">
         </div>
       </section>
-      <section>
-        <h2>Почему выбирают Mpassistant</h2>
-        <ul>
-          <li>
-            <h3>Точность данных</h3>
-            <p>Данные в отчётах сервиса полностью совпадает с данными ваших магазинов на маркетплейсах.</p>
+      <section class="advantages">
+        <h2 class="advantages__title title">Почему выбирают Mpassistant</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--accuracy">
+              <span>Точность данных</span>
+            </h3>
+            <p class="advantages__description">Данные в отчётах сервиса полностью совпадает с данными ваших магазинов на маркетплейсах.</p>
           </li>
-          <li>
-            <h3>Большой функционал</h3>
-            <p>Полный набор инструментов для внутренней аналитики для Wildberries и Ozon. Более 10 полезных отчётов с удобными настраиваемыми фильтрами и параметрами.</p>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--functional">
+              <span>Большой функционал</span>
+            </h3>
+            <p class="advantages__description">Полный набор инструментов для внутренней аналитики для Wildberries и Ozon. Более 10 полезных отчётов с удобными настраиваемыми фильтрами и параметрами.</p>
           </li>
-          <li>
-            <h3>Лёгкость освоения</h3>
-            <p>Наши отчёты просты и удобны. Все отчёты имеют подробные инструкции и видео, помогающие легко читать их и использовать.</p>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--ease">
+              <span>Лёгкость освоения</span>
+            </h3>
+            <p class="advantages__description">Наши отчёты просты и удобны. Все отчёты имеют подробные инструкции и видео, помогающие легко читать их и использовать.</p>
           </li>
-          <li>
-            <h3>Подходит всем</h3>
-            <p>Mpassistant создан селлерами для селлеров. Наш опыт в товарном бизнесе и разработке IT систем позволил создать полезный и удобный продукт, поэтому он подойдёт как для новичков, так и для опытных селлеров.</p>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--everyone">
+              <span>Подходит всем</span>
+            </h3>
+            <p class="advantages__description">Mpassistant создан селлерами для селлеров. Наш опыт в товарном бизнесе и разработке IT систем позволил создать полезный и удобный продукт, поэтому он подойдёт как для новичков, так и для опытных селлеров.</p>
           </li>
-          <li>
-            <h3>Конфиденциальность</h3>
-            <p>Ваша конфиденциальность для нас самый главный приоритет. Все ваши данные надёжно сохранены, а информация об этом записана в договоре-оферте. По желанию можем заключить дополнительное соглашение (NDA).</p>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--confidentiality">
+              <span>Конфиденциальность</span>
+            </h3>
+            <p class="advantages__description">Ваша конфиденциальность для нас самый главный приоритет. Все ваши данные надёжно сохранены, а информация об этом записана в договоре-оферте. По желанию можем заключить дополнительное соглашение (NDA).</p>
           </li>
-          <li>
-            <h3>Служба заботы</h3>
-            <p>Наша служба заботы готова решить практически любые вопросы и в режиме 24/7.</p>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--service">
+              <span>Служба заботы</span>
+            </h3>
+            <p class="advantages__description">Наша служба заботы готова решить практически любые вопросы и в режиме 24/7.</p>
           </li>
         </ul>
         <div class="advantages__test test">
           <div class="test__wrapper">
-            <p>Попробуйте бесплатно</p>
-            <p>3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
-            <form action="#" method="post" autocomplete="off">
-              <label>
+            <p class="test__heading">Попробуйте бесплатно</p>
+            <p class="test__appeal">3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
+            <form class="test__form" action="#" method="post" autocomplete="off">
+              <label class="test__label">
                 <input type="email" name="email" placeholder="Введите ваш email" required>
               </label>
-              <button type="submit">Попробовать</button>
+              <button class="test__button button button--gradient-reverse" type="submit">Попробовать</button>
             </form>
           </div>
           <div class="test__image-wrapper">
@@ -222,79 +222,84 @@
           </div>
         </div>
       </section>
-      <section>
-        <h2>Выберите тариф</h2>
-        <form action="#" method="get" autocomplete="off">
-          <button type="button">1 месяц</button>
-          <button type="button">3 месяца</button>
-          <button type="button">6 месяцев</button>
-          <button type="button">12 месяца</button>
+      <section class="rate">
+        <h2 class="rate__title title">Выберите тариф</h2>
+        <form class="rate__form" action="#" method="get" autocomplete="off">
+          <button class="rate__button-form rate__button-form--active" type="button">1 месяц</button>
+          <button class="rate__button-form" type="button">3 месяца</button>
+          <button class="rate__button-form" type="button">6 месяцев</button>
+          <button class="rate__button-form" type="button">12 месяца</button>
         </form>
-        <ul>
-          <li>
+        <ul class="rate__list">
+          <li class="rate__item rate-card rate-card--white">
             <div class="rate-card__wrapper">
               <div class="rate-card__inner">
-                <h3>Стартовый</h3> 
-                <br>4 990 ₽
+                <span class="rate-card__credit"></span>
+                <h3 class="rate-card__title">Стартовый</h3> 
+                <span class="rate-card__price">4 990 ₽</span>
               </div>
+              <span class="rate-card__percent"></span>
               <div class="rate-card__button-wrapper">
-                <a href="#">Попробовать</a>
-                <a href="#">Подробнее</a>
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
               </div>
             </div>
           </li>
-          <li>
+          <li class="rate__item rate-card rate-card--blue rate-card--credit rate-card--discount">
             <div class="rate-card__wrapper">
               <div class="rate-card__inner">
-                <h3>Стартовый +</h3>
-                <p>4 491 ₽/мес<br>13 473 ₽</p>
+                <h3 class="rate-card__title">Стартовый +</h3>
+                <span class="rate-card__credit">4 491 ₽/мес</span>
+                <span class="rate-card__price">13 473 ₽</span>
               </div>
-              <p>— 10%</p>
+              <span class="rate-card__percent">— 10%</span>
               <div class="rate-card__button-wrapper">
-                <a href="#">Попробовать</a>
-                <a href="#">Подробнее</a>
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
               </div>
             </div>
           </li>
-          <li>
+          <li class="rate__item rate-card rate-card--green rate-card--credit rate-card--discount">
             <div class="rate-card__wrapper">
               <div class="rate-card__inner">
-                <h3>Профи</h3>
-                <p>4 241 ₽/мес<br>25 446 ₽</p>
+                <h3 class="rate-card__title">Профи</h3>
+                <span class="rate-card__credit">4 241 ₽/мес</span>
+                <span class="rate-card__price">25 446 ₽</span>
               </div>
-              <p>15%</p>
+              <span class="rate-card__percent">— 15%</span>
               <div class="rate-card__button-wrapper">
-                <a href="#">Попробовать</a>
-                <a href="#">Подробнее</a>
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
               </div>
             </div>
           </li>
-          <li>
+          <li class="rate__item rate__item--special rate-card--credit rate-card rate-card--special">
             <div class="rate-card__wrapper">
               <div class="rate-card__inner">
-                <h3>Начинающим селлерам с выручкой</h3>
-                <p>до 200 000 ₽/мес</p>
-                <h2>Бесплатно</h2>
+                <h3 class="rate-card__title">Начинающим селлерам с выручкой</h3>
+                <span class="rate-card__credit">до 200 000 ₽/мес</span>
+                <span class="rate-card__price">Бесплатно</span>
               </div>
+              <span class="rate-card__percent"></span>
               <div class="rate-card__button-wrapper">
-                <a href="#">Попробовать</a>
-                <a href="#">Подробнее</a>
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
               </div>
             </div>
             <div class="rate-card__image-wrapper">
-              <img src="#" alt="Специальное предложение">
+              <img class="rate-card__image" src="#" alt="Специальное предложение">
             </div>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="reviews">
         <div class="reviews__header">
-          <h2>Отзывы</h2>
+          <h2 class="reviews__title title">Отзывы</h2>
         </div>
-        <ul>
-          <li>
+        <ul class="reviews__list">
+          <li class="reviews__item reviews__item--show">
             <blockquote>
-              <p>
+              <p class="reviews__text">
                 Изначально нашёл сервис в поиске Яндекса, когда искал калькулятор unit-экономики товара. Калькулятор
                 полностью устроил и решил пользоваться самим сайтом. К тому же это было для меня бесплатно,
                 так как проходил по условиям бесплатного доступа: оборот до 200т.р в месяц. Этого не встретить на других
@@ -302,28 +307,28 @@
                 сайтам. Радует поддержка, получал ответы на всевопросы, выслушивали
               </p>
             </blockquote>
-            <div >
-              <button>Читать полностью</button>
-              <p>— Алексей</p>
+            <div class="reviews__accordion">
+              <button class="reviews__button" type="button">Читать полностью</button>
+              <p class="reviews__author">— Алексей</p>
             </div>
           </li>
-          <li>
+          <li class="reviews__item reviews__item--show">
             <blockquote>
-              <p>
+              <p class="reviews__text">
                 Функционал сервиса, тот что есть — полностью устраивает. Хочется ещё автобиддер по ставкам в рекламных
                 компаниях и цены вам не будет!
               </p>
             </blockquote>
-            <div>
-              <button>Читать полностью</button>
-              <p>— Владислав</p>
+            <div class="reviews__accordion">
+              <button class="reviews__button reviews__button--hidden">Читать полностью</button>
+              <p class="reviews__author">— Владислав</p>
             </div>
           </li>
         </ul>
       </section>
     </div>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="footer__container">
       <div class="footer__contacts">
         <div class="footer__logo logo">
