@@ -653,7 +653,7 @@
   width: 100%
 }
 
-@media (max-width:1023px) {
+@media (max-width:1024px) {
   .test__image-wrapper {
     right: 50%;
     transform: translateX(50%)
