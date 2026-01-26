@@ -10,6 +10,8 @@
   --line-height-base: 2.75rem;
   --border-radius: 30px;
 
+  --gradient-button: linear-gradient(91deg, var(--color-green) 5.69%, var(--color-accent) 169.72%);
+
   --hero-subtitle-color: #6c778e;
   --hero-subtitle-font-size: 1.6rem;
 
@@ -1050,7 +1052,6 @@
   }
 }
 
-
 .reports__list {
   margin: 0;
   padding: 0;
@@ -1233,6 +1234,12 @@
 
 .advantages__subtitle--service::before {
   background-image: url(../img/service.svg)
+}
+
+.advantages__icon {
+  width: 4.8rem; 
+  height: 4.8rem;
+  object-fit: contain;
 }
 
 .advantages__description {
@@ -1966,12 +1973,25 @@ footer {
   height: 60px
 }
 
-@media (min-width:1920px) {
+@media (min-width:768px) {
   .socials__link {
     width: 70px;
     height: 70px
   }
 }
+
+.socials__link--vkontakte {
+  background-image: url(../img/vkontakte.svg)
+}
+
+.socials__link--telegram {
+  background-image: url(../img/telegram.svg)
+}
+
+.socials__link--youtube {
+  background-image: url(../img/youtube.svg)
+}
+
 
 
 .payment {
@@ -2026,10 +2046,55 @@ footer {
   display: block
 }
 
-.picture {
-  padding: 30px 0 10px
+.picture__list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0 auto;
+  border: 15px solid #cecece;
+  display: grid;
+  grid-template-columns: 2fr 6fr 1fr;
+  grid-template-rows: 3fr 3fr 1fr 1fr;
+  width: 650px;
+  height: 650px;
+  gap: 20px;
+  background-color: #040b08
 }
 
-.picture__title {
-  margin: 0 0 20px
+@media (max-width:767px) {
+  .picture__list {
+    width: 90vw;
+    height: 90vw
+  }
+}
+
+.picture__list li:nth-child(1) {
+  background-color: #eae9e7
+}
+
+.picture__list li:nth-child(2) {
+  background-color: #d52315;
+  grid-column: 2/4;
+  grid-row: 1/3
+}
+
+.picture__list li:nth-child(3) {
+  background-color: #eae9e7
+}
+
+.picture__list li:nth-child(4) {
+  background-color: #025b9d;
+  grid-row: 3/5
+}
+
+.picture__list li:nth-child(4) {
+  background-color: #025b9d;
+  grid-row: 3/5
+}
+
+.picture__list li:nth-child(6) {
+  background-color: #eae9e7
+}
+
+.picture__list li:nth-child(7) {
+  background-color: #f1dd7e
 }
