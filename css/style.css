@@ -53,6 +53,20 @@
   border-width: 0
 }
 
+.skip-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 10px 15px;
+  color: #18191c;
+  background: #10f3af;
+  transform: translateY(-100%)
+}
+
+.skip-link:focus {
+  transform: translateY(20%)
+}
 
 .page {
   height: 100%;
@@ -1077,29 +1091,36 @@
   border-radius: var(--border-radius-card);
   background-color: #eaf3fd;
   padding: 20px 20px 25px;
-  display: flex;
-  column-gap: 9px
+  position: relative;
 }
 
-@media (min-width:1920px) {
-  .reports__item {
-    padding: 30px 40px 40px
-  }
-}
+
 
 .reports__item::before {
   content: "";
-  min-width: var(--gap);
-  height: var(--gap);
-  background: url(../img/check.svg) no-repeat center
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../img/check.svg) no-repeat center / contain;
 }
 
-@media (min-width:1920px) {
-  .reports__item::before {
-    min-width: 26px;
-    height: 26px
+
+.reports__item > * {
+  padding-left: 56px;
+}
+
+@media (min-width: 1920px) {
+  .reports__item {
+    padding: 30px 40px 40px;
+    padding-left: 46px;
+    background-position: 26px center;
+    background-size: 26px 26px;
   }
 }
+
 
 .reports__text {
   margin: 0;
@@ -1116,10 +1137,21 @@
 }
 
 
-.reports__image {
-  display: block
+.reports__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: clamp(32rem, 50vw, 42rem);
+  margin: 0rem auto;
+  border-radius: var(--border-radius-lg);
 }
 
+.reports__image {
+  width: 100%; /* Чуть меньше wrapper, чтобы не прилегало к краям */
+  object-fit: contain; /* Вписывается полностью, не обрезает важное */
+  object-position: center; /* Центр изображения в центре */
+}
 
 .advantages {
   padding: 30px 0 20px
@@ -1732,7 +1764,7 @@
 
 .reviews__button {
   padding: 0;
-  color: #2eb897;
+  color: var(--color-accent-light);
   font-size: var(--font-size-lg);
   line-height: 2.25rem;
   background: 0 0;
