@@ -19,6 +19,7 @@
       <div class="header__logo logo">
         <a class="logo__link" href="./index.html">
           <img class="logo__image" src="./img/logo.png" width="187" height="18" alt="Логотип Mpasisstant">
+          <span class="sr-only">На главную</span>
         </a>
         <p class="logo__text">
           Аналитика и оцифровка продаж<br>
@@ -183,8 +184,10 @@
           </ul>
           <div class="reports__image-wrapper">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/reports-desktop@1x.png 1x, img/reports-desktop@2x.png 2x">
-              <img class="reports__image" src="img/reports-mobile@1x.png" srcset="img/reports-mobile@2x.png 2x">
+              <source media="(min-width: 1440px)" type="image/png"
+                srcset="img/reports-desktop@1x.png 1x, img/reports-desktop@2x.png 2x" width="690" height="416">
+              <img class="reports__image" src="img/reports-mobile@1x.png" srcset="img/reports-mobile@1x.png 2x"
+                width="280" height="255" alt="Схема сбора отчетов.">
             </picture>
           </div>
         </div>
@@ -328,6 +331,14 @@
       <section class="reviews">
         <div class="reviews__header">
           <h2 class="reviews__title title">Отзывы</h2>
+          <div class="reviews__controls-wrapper">
+            <button class="reviews__control reviews__control--prev" type="button">
+              <span class="sr-only">Назад</span>
+            </button>
+            <button class="reviews__control reviews__control--next" type="button">
+              <span class="sr-only">Вперед</span>
+            </button>
+          </div>
         </div>
         <ul class="reviews__list">
           <li class="reviews__item reviews__item--show">
@@ -367,6 +378,7 @@
         <div class="footer__logo logo">
           <a class="logo__link" href="./index.html">
             <img class="logo__image" src="./img/logo.png" width="187" height="18" alt="Логотип в футере">
+            <span class="sr-only">На главную</span>
           </a>
           <p class="logo__text">
             Аналитика и оцифровка продаж<br>
@@ -377,17 +389,17 @@
         <ul class="footer__socials socials">
           <li class="socials__item">
             <a class="socials__link socials__link--vkontakte" href="#">
-              <span class="sr-only">Vkontakte</span>
+              <span class="sr-only">Перейти в группу ВКонтакте</span>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--telegram" href="#">
-              <span class="sr-only">Telegram</span>
+              <span class="sr-only">Написать в Telegram-канал</span>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--youtube" href="#">
-              <span class="sr-only">YouTube</span>
+              <span class="sr-only">Посмотреть видео на YouTube</span>
             </a>
           </li>
         </ul>

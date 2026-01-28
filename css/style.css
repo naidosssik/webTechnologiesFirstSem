@@ -1148,9 +1148,9 @@
 }
 
 .reports__image {
-  width: 100%; /* Чуть меньше wrapper, чтобы не прилегало к краям */
-  object-fit: contain; /* Вписывается полностью, не обрезает важное */
-  object-position: center; /* Центр изображения в центре */
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .advantages {
@@ -1430,8 +1430,9 @@
 .rate-card__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: var(--gap-md)
+  height: 100%;
 }
+
 
 @media (min-width:1920px) {
   .rate-card__wrapper {
@@ -1440,7 +1441,7 @@
 }
 
 .rate-card__inner {
-  min-height: 80px;
+  flex: 1;
   display: flex;
   flex-direction: column
 }
@@ -1524,6 +1525,7 @@
 }
 
 .rate-card__button-wrapper {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   row-gap: 10px
@@ -1999,21 +2001,25 @@ footer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 11px
+  column-gap: 11px;
 }
 
 .socials__link {
   display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
-  width: 60px;
-  height: 60px
+  background-size: 100%;
 }
 
-@media (min-width:768px) {
+@media (max-width: 767px) {
   .socials__link {
-    width: 70px;
-    height: 70px
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
   }
 }
 
